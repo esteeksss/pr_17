@@ -22,8 +22,7 @@ public class Main {
                 try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("saved.txt"))) {
                     Solution s = (Solution) ois.readObject();
                     System.out.printf("Значение x = %f\ty = %f\n",s.x,s.y);
-                } catch (ClassNotFoundException ex){
-                    throw new RuntimeException(ex);
+                }
                 } catch (Exception e){
                     e.printStackTrace(System.out);
                 }
